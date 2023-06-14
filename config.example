@@ -1,0 +1,7 @@
+EMAIL=
+PASSWORD=
+AUTH=microsoft
+HOST=play.steroidmc.net
+HUB_COMMAND=/joinqueue factions
+DELAY_MIN=2500
+DELAY_MAX=7500
