@@ -28,7 +28,7 @@ const unscrambleRegex = /Reaction » First one to unscramble (.*) wins a reward!
     _ = require('lodash'),
     solve = async (unsolved) => {
         matches = [];
-        traverse(tree, Immutable.List(unsolved.split("")));
+        traverse(tree, immutable.List(unsolved.split("")));
         matches.sort((a, b) => a.length - b.length);
 
         let mostLikely = "";
@@ -76,7 +76,7 @@ process.stdin.on("data", async (data) => bot.chat(data.toString().trim()));
         log("Successfully logged into the server! (" + bot.username + ")");
         bot.chatAddPattern(unscrambleRegex, "unscramble");
         bot.chatAddPattern(typeFastRegex, "type");
-        bot.chatAddPattern(kickRegex, "autisticError")
+        bot.chatAddPattern(kickRegex, "autisticError");
         setTimeout(() => bot.chat(process.env["HUB_COMMAND"]), 1500);
     });
 
